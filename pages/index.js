@@ -6,6 +6,7 @@ export default function Home() {
       <Head>
         <title>Safak Blog</title>
       </Head>
+      <h2>hello</h2>
     </div>
   );
 }
