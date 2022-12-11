@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import Head from "next/head";
 import matter from "gray-matter";
+import Post from "../components/Post";
+
 export default function Home({ posts }) {
   console.log(posts);
   return (
@@ -9,7 +11,11 @@ export default function Home({ posts }) {
       <Head>
         <title>Safak Blog</title>
       </Head>
-      <h2>Hello</h2>
+      <div className="posts">
+        {posts.map((post, index) => (
+          <Post post={post} />
+        ))}
+      </div>
     </div>
   );
 }
