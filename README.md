@@ -1,1 +1,1 @@
-next
+Blog application made with Next.js
