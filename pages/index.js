@@ -5,7 +5,6 @@ import matter from "gray-matter";
 import Post from "../components/Post";
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <div>
       <Head>
@@ -35,7 +34,6 @@ export async function getStaticProps() {
       "utf-8"
     );
     const { data: frontmatter } = matter(markdownWithMeta);
-    console.log(markdownWithMeta);
     return { slug, frontmatter };
   });
   return {
