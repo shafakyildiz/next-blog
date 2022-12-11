@@ -11,7 +11,7 @@ export default function PostPage({
 }) {
   return (
     <>
-      <Link href="/">
+      <Link legacyBehavior href="/">
         <a className="btn btn-back">Go Back</a>
       </Link>
       <div className="card card-page">
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace(".md", "md"),
+      slug: filename.replace(".md", ""),
     },
   }));
   console.log(paths);
